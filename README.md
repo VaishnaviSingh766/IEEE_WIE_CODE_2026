@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # WIE CODE 2K26-27 — Frontend
 
 A collaborative React website for the IEEE WIE Student Branch coding event.
@@ -116,3 +117,6 @@ npm run build    # Build for production
 npm run preview  # Preview production build
 npm run lint     # Lint with ESLint
 ```
+=======
+# IEEE_WIE_CODE_2026
+>>>>>>> a70b16c2f426b5c3f4b00ccceb39d9eaed1bbc21

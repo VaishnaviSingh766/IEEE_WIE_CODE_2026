@@ -1,0 +1,2002 @@
+/* ==========================================================================
+
+   WIE CODE 2K26 - CONTACT US STYLESHEET (SCOPED TO .contact-us-page-scope)
+
+   Theme: Matched to ABOUT US Header & Colors
+
+   Typography: Space Grotesk / Plus Jakarta Sans
+
+   Palette: Black (#000000), White (#FFFFFF), Exact Magenta (#C2188A)
+
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap');
+
+.contact-us-page-scope {
+
+  --bg-black: #000000;
+
+  /* Exact Magenta extracted from the ABOUT US theme */
+
+  --magenta-primary: #C2188A;
+
+  --magenta-vibrant: #C2188A;
+
+  --magenta-hover: #D6219B;
+
+  --magenta-glow: rgba(194, 24, 138, 0.45);
+
+  /* Typography Grayscale */
+
+  --text-white: #FFFFFF;
+
+  --text-light: #E5E7EB;
+
+  --text-muted: #9CA3AF;
+
+  --text-dim: #6B7280;
+
+  --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --radius-card: 28px;
+
+  --radius-inner: 16px;
+
+  --radius-sm: 10px;
+
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  background-color: var(--bg-black);
+
+  color: var(--text-white);
+
+  font-family: var(--font-sans);
+
+  -webkit-font-smoothing: antialiased;
+
+  overflow-x: hidden;
+
+}
+
+.contact-us-page-scope,
+
+.contact-us-page-scope *,
+
+.contact-us-page-scope *::before,
+
+.contact-us-page-scope *::after {
+
+  box-sizing: border-box;
+
+}
+
+/* ==========================================================================
+
+   MAIN SECTION WRAPPER
+
+   ========================================================================== */
+
+.contact-us-page-scope .wie-contact-section {
+
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-start;
+
+  background-color: var(--bg-black);
+
+  color: var(--text-white);
+
+  padding: 48px 20px 60px 20px;
+
+  overflow: hidden;
+
+}
+
+/* ==========================================================================
+
+   BACKGROUND: NEON SWOOSH CIRCLES & 34PX DOT MATRIX
+
+   ========================================================================== */
+
+.contact-us-page-scope .wie-bg {
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+}
+
+.contact-us-page-scope .wie-bg::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px) 0 0 / 34px 34px;
+
+  pointer-events: none;
+
+}
+
+.contact-us-page-scope .wie-sw {
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  border: 2px solid rgba(194, 24, 138, 0.7);
+
+  box-shadow: 
+
+    0 0 75px 10px rgba(194, 24, 138, 0.5), 
+
+    inset 0 0 110px rgba(194, 24, 138, 0.35);
+
+  pointer-events: none;
+
+}
+
+.contact-us-page-scope .wie-sw.sw-a {
+
+  width: 130vw;
+
+  height: 95vh;
+
+  left: -85vw;
+
+  bottom: -45vh;
+
+  transform: rotate(-12deg);
+
+}
+
+.contact-us-page-scope .wie-sw.sw-b {
+
+  width: 95vw;
+
+  height: 120vh;
+
+  right: -65vw;
+
+  top: 5vh;
+
+  transform: rotate(8deg);
+
+}
+
+.contact-us-page-scope .wie-sw.sw-c {
+
+  width: 70vw;
+
+  height: 55vh;
+
+  left: -35vw;
+
+  top: -28vh;
+
+  transform: rotate(10deg);
+
+  opacity: 0.75;
+
+}
+
+.contact-us-page-scope .wie-ambient-glow-top {
+
+  position: absolute;
+
+  top: 8%;
+
+  left: 15%;
+
+  width: 500px;
+
+  height: 500px;
+
+  background: radial-gradient(circle, rgba(194, 24, 138, 0.22) 0%, transparent 70%);
+
+  filter: blur(120px);
+
+  pointer-events: none;
+
+}
+
+.contact-us-page-scope .wie-ambient-glow-bottom {
+
+  position: absolute;
+
+  bottom: 8%;
+
+  right: 15%;
+
+  width: 500px;
+
+  height: 500px;
+
+  background: radial-gradient(circle, rgba(194, 24, 138, 0.2) 0%, transparent 70%);
+
+  filter: blur(120px);
+
+  pointer-events: none;
+
+}
+
+.contact-us-page-scope .wie-contact-container {
+
+  width: 100%;
+
+  max-width: 1220px;
+
+  margin: 0 auto;
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+/* ==========================================================================
+
+   SECTION HEADER (CONTACT IN WHITE, US IN MAGENTA)
+
+   ========================================================================== */
+
+.contact-us-page-scope .wie-section-header {
+
+  text-align: center;
+
+  margin-top: 40px;
+
+  margin-bottom: 40px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  position: relative;
+
+}
+
+.contact-us-page-scope .wie-section-title {
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(2.4rem, 4.8vw, 3.8rem);
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  color: #FFFFFF !important;
+
+  margin: 0 0 16px 0;
+
+  line-height: 1.1;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  position: relative;
+
+}
+
+/* Linear divider line directly underneath heading */
+
+.contact-us-page-scope .wie-section-title::after {
+
+  display: none;
+
+}
+
+/* Specific styling for the 'US' span */
+
+.contact-us-page-scope .wie-highlight-magenta,
+
+.contact-us-page-scope .wie-section-title .wie-highlight-magenta {
+
+  color: var(--magenta-primary) !important;
+
+  font-style: normal;
+
+  font-weight: 800;
+
+  text-shadow: 0 0 25px rgba(194, 24, 138, 0.65);
+
+}
+
+.contact-us-page-scope .wie-section-subtitle {
+
+  font-size: clamp(0.92rem, 1.2vw, 1.02rem);
+
+  color: var(--text-light);
+
+  line-height: 1.6;
+
+  max-width: 640px;
+
+  margin: 18px auto 0 auto;
+
+  font-weight: 400;
+
+  text-align: center;
+
+}
+
+/* ==========================================================================
+
+   CARDS GRID & ACRYLIC FROSTED GLASS
+
+   ========================================================================== */
+
+.contact-us-page-scope .wie-contact-grid {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 32px;
+
+  align-items: stretch;
+
+}
+
+.contact-us-page-scope .wie-contact-card {
+
+  background: linear-gradient(
+
+    145deg,
+
+    rgba(255, 255, 255, 0.12) 0%,
+
+    rgba(255, 255, 255, 0.035) 38%,
+
+    rgba(14, 10, 20, 0.6) 72%,
+
+    rgba(194, 24, 138, 0.08) 100%
+
+  );
+
+  -webkit-backdrop-filter: blur(28px) saturate(160%);
+
+  backdrop-filter: blur(28px) saturate(160%);
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  border-top: 1.5px solid rgba(255, 255, 255, 0.52);
+
+  border-left: 1.5px solid rgba(255, 255, 255, 0.32);
+
+  border-radius: var(--radius-card);
+
+  padding: 42px 38px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  position: relative;
+
+  overflow: hidden;
+
+  /* Suppress scrollbar gutter bleed-through */
+
+  scrollbar-width: none;
+
+  -ms-overflow-style: none;
+
+  box-shadow: 
+
+    0 24px 65px rgba(0, 0, 0, 0.8),
+
+    inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.42),
+
+    inset 1px 0 1px 0 rgba(255, 255, 255, 0.22);
+
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+
+}
+
+.contact-us-page-scope .wie-contact-card::-webkit-scrollbar {
+
+  display: none;
+
+}
+
+.contact-us-page-scope .wie-contact-card::after {
+
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+
+  height: 42%;
+
+  background: linear-gradient(
+
+    175deg,
+
+    rgba(255, 255, 255, 0.08) 0%,
+
+    rgba(255, 255, 255, 0.02) 40%,
+
+    transparent 100%
+
+  );
+
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+
+  pointer-events: none;
+
+}
+
+.contact-us-page-scope .wie-contact-card:hover {
+
+  border-color: rgba(255, 255, 255, 0.35);
+
+  border-top-color: rgba(255, 255, 255, 0.72);
+
+  border-left-color: rgba(255, 255, 255, 0.45);
+
+  box-shadow: 
+
+    0 32px 80px rgba(0, 0, 0, 0.9),
+
+    0 0 35px rgba(194, 24, 138, 0.35),
+
+    inset 0 2px 1.5px 0 rgba(255, 255, 255, 0.6);
+
+  transform: translateY(-2px);
+
+}
+
+/* Glass Pill Tag with Magenta Dot */
+
+.contact-us-page-scope .wie-card-tag {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  align-self: flex-start;
+
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+
+  backdrop-filter: blur(14px);
+
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 9999px;
+
+  padding: 5px 14px;
+
+  font-size: 0.72rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1.4px;
+
+  color: #FFFFFF;
+
+  text-transform: uppercase;
+
+  margin-bottom: 22px;
+
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+
+}
+
+.contact-us-page-scope .wie-card-tag::before {
+
+  content: '';
+
+  display: inline-block;
+
+  width: 6px;
+
+  height: 6px;
+
+  border-radius: 50%;
+
+  background-color: var(--magenta-primary);
+
+  box-shadow: 0 0 10px var(--magenta-primary);
+
+}
+
+/* ==========================================================================
+
+   LEFT CARD: ENQUIRY FORM
+
+   ========================================================================== */
+
+/* ==========================================================================
+
+   LEFT CARD: ENQUIRY FORM (GLITCH-FREE)
+
+   ========================================================================== */
+
+.contact-us-page-scope .wie-contact-form {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+
+  flex: 1;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  /* Removed overflow: hidden so no scrollbar gutter boundary is reserved */
+
+}
+
+.contact-us-page-scope .wie-form-group {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+  width: 100%;
+
+}
+
+.contact-us-page-scope .wie-message-group {
+
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 120px;
+
+  margin-bottom: 8px;
+
+}
+
+.contact-us-page-scope .wie-form-label {
+
+  font-size: 0.82rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.3px;
+
+  color: var(--text-light);
+
+}
+
+.contact-us-page-scope .wie-form-label span {
+
+  color: var(--magenta-primary);
+
+}
+
+/* Inputs & Textarea: Removed nested backdrop-filter to eliminate the vertical band */
+
+.contact-us-page-scope .wie-form-input,
+
+.contact-us-page-scope .wie-form-textarea {
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  border-top: 1.5px solid rgba(255, 255, 255, 0.32);
+
+  border-radius: var(--radius-inner);
+
+  padding: 14px 18px;
+
+  font-family: var(--font-sans);
+
+  font-size: 0.95rem;
+
+  color: #FFFFFF;
+
+  outline: none;
+
+  box-shadow: 
+
+    inset 0 1px 1px rgba(255, 255, 255, 0.2),
+
+    0 4px 14px rgba(0, 0, 0, 0.3);
+
+  transition: all 0.25s ease;
+
+}
+
+.contact-us-page-scope .wie-form-input::placeholder,
+
+.contact-us-page-scope .wie-form-textarea::placeholder {
+
+  color: #7A7A8C;
+
+  font-size: 0.9rem;
+
+}
+
+.contact-us-page-scope .wie-form-input:focus,
+
+.contact-us-page-scope .wie-form-textarea:focus {
+
+  border-color: var(--magenta-primary);
+
+  border-top-color: #FFFFFF;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  box-shadow: 
+
+    0 0 20px rgba(194, 24, 138, 0.45),
+
+    inset 0 1.5px 1px rgba(255, 255, 255, 0.45);
+
+}
+
+.contact-us-page-scope .wie-form-textarea {
+
+  flex: 1;
+
+  resize: none;
+
+  min-height: 120px;
+
+  line-height: 1.5;
+
+}
+
+.contact-us-page-scope .wie-submit-container {
+
+  margin-top: auto;
+
+  flex-shrink: 0;
+
+  padding-top: 6px;
+
+}
+
+.contact-us-page-scope .wie-btn-submit {
+
+  width: 100%;
+
+  padding: 16px 28px;
+
+  background: var(--magenta-primary);
+
+  color: #FFFFFF;
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  border-top: 1.5px solid rgba(255, 255, 255, 0.65);
+
+  border-radius: 9999px;
+
+  font-family: var(--font-sans);
+
+  font-size: 0.92rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  box-shadow: 
+
+    0 10px 30px rgba(194, 24, 138, 0.55),
+
+    inset 0 2px 1.5px rgba(255, 255, 255, 0.55);
+
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+.contact-us-page-scope .wie-btn-submit::before {
+
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+
+  left: -100%;
+
+  width: 60%;
+
+  height: 100%;
+
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+
+  transform: skewX(-22deg);
+
+  transition: left 0.75s ease;
+
+}
+
+.contact-us-page-scope .wie-btn-submit:hover {
+
+  background: var(--magenta-hover);
+
+  border-top-color: #FFFFFF;
+
+  box-shadow: 
+
+    0 14px 40px rgba(194, 24, 138, 0.75),
+
+    0 0 25px rgba(194, 24, 138, 0.7),
+
+    inset 0 2px 2px rgba(255, 255, 255, 0.75);
+
+}
+
+.contact-us-page-scope .wie-btn-submit:hover::before {
+
+  left: 140%;
+
+}
+
+.contact-us-page-scope .wie-btn-submit:disabled {
+
+  opacity: 0.7;
+
+  cursor: not-allowed;
+
+}
+
+.contact-us-page-scope .wie-btn-icon {
+
+  transition: transform 0.25s ease;
+
+}
+
+.contact-us-page-scope .wie-btn-submit:hover .wie-btn-icon {
+
+  transform: translateX(4px);
+
+}
+
+/* ==========================================================================
+
+   RIGHT CARD: VENUE, LEADS & MAP
+
+   ========================================================================== */
+
+.contact-us-page-scope .wie-venue-header-row {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  width: 100%;
+
+}
+
+.contact-us-page-scope .wie-venue-icon-wrapper {
+
+  flex-shrink: 0;
+
+  width: 42px;
+
+  height: 42px;
+
+  border-radius: 12px;
+
+  background: rgba(194, 24, 138, 0.16);
+
+  border: 1px solid rgba(194, 24, 138, 0.45);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-shadow: 0 0 18px rgba(194, 24, 138, 0.35);
+
+}
+
+.contact-us-page-scope .wie-venue-pin-icon {
+
+  color: var(--magenta-primary);
+
+}
+
+.contact-us-page-scope .wie-venue-text {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+}
+
+.contact-us-page-scope .wie-venue-name {
+
+  font-size: 1.05rem;
+
+  font-weight: 700;
+
+  color: var(--text-white);
+
+  margin: 0;
+
+  line-height: 1.35;
+
+}
+
+.contact-us-page-scope .wie-venue-state {
+
+  font-size: 0.85rem;
+
+  color: var(--text-muted);
+
+  margin: 0;
+
+  line-height: 1.4;
+
+}
+
+/* Separator lines in matching magenta */
+
+.contact-us-page-scope .wie-contact-leads {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0;
+
+  margin-bottom: 20px;
+
+}
+
+/* Row layout: Name & Role on the left, Phone on the far right */
+
+.contact-us-page-scope .wie-contact-line {
+
+  display: flex;
+
+  flex-direction: row;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 16px;
+
+  width: 100%;
+
+  padding: 4px 0;
+
+}
+
+.contact-us-page-scope .wie-lead-details {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+}
+
+/* Increased font size to fill the card naturally */
+
+.contact-us-page-scope .wie-lead-name {
+
+  font-size: 1.15rem;
+
+  font-weight: 700;
+
+  color: var(--text-white);
+
+  line-height: 1.25;
+
+}
+
+.contact-us-page-scope .wie-lead-role {
+
+  font-size: 0.84rem;
+
+  font-weight: 600;
+
+  color: var(--magenta-primary);
+
+  letter-spacing: 0.6px;
+
+  text-transform: uppercase;
+
+  text-shadow: 0 0 10px rgba(194, 24, 138, 0.4);
+
+}
+
+/* Phone number aligned to the right */
+
+.contact-us-page-scope .wie-lead-phone-text {
+
+  font-size: 1.05rem;
+
+  font-weight: 700;
+
+  color: var(--text-white);
+
+  text-decoration: none;
+
+  letter-spacing: 0.5px;
+
+  white-space: nowrap;
+
+  background: transparent;
+
+  border: none;
+
+  padding: 0;
+
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+
+}
+
+.contact-us-page-scope .wie-lead-phone-text:hover {
+
+  color: var(--magenta-primary);
+
+  text-shadow: 0 0 10px rgba(194, 24, 138, 0.5);
+
+}
+
+.contact-us-page-scope .wie-lead-phone-text:hover {
+
+  color: var(--magenta-primary);
+
+  text-shadow: 0 0 10px rgba(194, 24, 138, 0.5);
+
+  border-color: rgba(194, 24, 138, 0.3);
+
+}
+
+/* Divider spacing */
+
+.contact-us-page-scope .wie-contact-divider {
+
+  width: 100%;
+
+  height: 1px;
+
+  margin: 16px 0;
+
+  background: rgba(194, 24, 138, 0.7);
+
+  box-shadow: 0 0 6px rgba(194, 24, 138, 0.3);
+
+}
+
+/* ==========================================================================
+
+   INTERACTIVE MAP VIEW
+
+   ========================================================================== */
+
+.contact-us-page-scope .wie-campus-container {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 270px;
+
+  border-radius: var(--radius-inner);
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  border-top: 1.5px solid rgba(255, 255, 255, 0.45);
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.85);
+
+  background-color: #050508;
+
+  margin-top: auto;
+
+}
+
+.contact-us-page-scope .wie-embedded-map {
+
+  width: 100%;
+
+  height: 100%;
+
+  border: 0;
+
+  filter: invert(92%) hue-rotate(180deg) brightness(88%) contrast(118%) saturate(140%);
+
+  display: block;
+
+}
+
+.contact-us-page-scope .wie-map-tint-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  background: radial-gradient(
+
+    circle at 50% 50%,
+
+    rgba(194, 24, 138, 0.08) 0%,
+
+    rgba(5, 5, 10, 0.35) 75%,
+
+    rgba(2, 2, 6, 0.7) 100%
+
+  );
+
+  pointer-events: none;
+
+  z-index: 2;
+
+}
+
+.contact-us-page-scope .wie-map-badge-location {
+
+  position: absolute;
+
+  top: 12px;
+
+  left: 12px;
+
+  background: linear-gradient(135deg, rgba(20, 20, 30, 0.88) 0%, rgba(10, 10, 16, 0.92) 100%);
+
+  backdrop-filter: blur(20px);
+
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  border-top: 1.5px solid rgba(255, 255, 255, 0.38);
+
+  border-radius: var(--radius-sm);
+
+  padding: 6px 14px;
+
+  z-index: 4;
+
+}
+
+.contact-us-page-scope .wie-badge-label {
+
+  font-size: 0.65rem;
+
+  font-weight: 700;
+
+  color: var(--magenta-primary);
+
+  letter-spacing: 1.4px;
+
+  text-transform: uppercase;
+
+  display: block;
+
+  margin-bottom: 2px;
+
+}
+
+.contact-us-page-scope .wie-badge-value {
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  color: #FFFFFF;
+
+  white-space: nowrap;
+
+}
+
+/* Container anchored at the bottom-center of the map */
+
+.contact-us-page-scope .wie-map-btn-wrapper {
+
+  position: absolute;
+
+  bottom: 14px;
+
+  left: 0;
+
+  right: 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 5;
+
+  pointer-events: none; /* Allows map interactions around the button */
+
+}
+
+/* ==========================================================================
+
+   TOAST NOTIFICATION
+
+   ========================================================================== */
+
+.contact-us-page-scope .wie-toast-notification {
+
+  position: fixed;
+
+  bottom: 24px;
+
+  right: 24px;
+
+  background: linear-gradient(135deg, rgba(20, 20, 30, 0.92) 0%, rgba(10, 10, 16, 0.96) 100%);
+
+  backdrop-filter: blur(30px) saturate(200%);
+
+  -webkit-backdrop-filter: blur(30px) saturate(200%);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-top: 1.5px solid rgba(255, 255, 255, 0.5);
+
+  border-radius: 14px;
+
+  padding: 16px 22px;
+
+  color: #FFFFFF;
+
+  font-size: 0.92rem;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  box-shadow: 
+
+    0 25px 60px rgba(0, 0, 0, 0.9),
+
+    inset 0 1px 1px rgba(255, 255, 255, 0.35);
+
+  z-index: 1000;
+
+  animation: wieToastSlide 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+
+}
+
+.contact-us-page-scope .wie-toast-icon {
+
+  color: var(--magenta-primary);
+
+  display: flex;
+
+  align-items: center;
+
+}
+
+@keyframes wieToastSlide {
+
+  0% { transform: translateY(60px); opacity: 0; }
+
+  100% { transform: translateY(0); opacity: 1; }
+
+}
+
+/* ==========================================================================
+
+   RESPONSIVENESS
+
+   ========================================================================== */
+
+@media (max-width: 968px) {
+
+  .contact-us-page-scope .wie-contact-section {
+
+    padding-top: 40px;
+
+  }
+
+  .contact-us-page-scope .wie-contact-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+
+  }
+
+  .contact-us-page-scope .wie-contact-card {
+
+    padding: 32px 24px;
+
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .contact-us-page-scope .wie-contact-section {
+
+    padding: 32px 14px 40px 14px;
+
+  }
+
+  .contact-us-page-scope .wie-section-header {
+
+    margin-bottom: 24px;
+
+  }
+
+  .contact-us-page-scope .wie-section-title {
+
+    font-size: 2.2rem;
+
+    gap: 8px;
+
+  }
+
+  .contact-us-page-scope .wie-section-title::after {
+
+    width: 140px;
+
+  }
+
+}
+
+/* ==========================================================================
+
+   SHARED WIE CODE FONT CLASS INTEGRATION
+
+   Uses font faces declared in src/cssfiles/font.css
+
+   ========================================================================== */
+
+.contact-us-page-scope .font-wiecode {
+
+  font-family: "WieCode", sans-serif !important;
+
+}
+
+.contact-us-page-scope .font-heading {
+
+  font-family: "Heading", sans-serif !important;
+
+}
+
+.contact-us-page-scope .font-subheading {
+
+  font-family: "Subheading", sans-serif !important;
+
+}
+
+.contact-us-page-scope .font-paragraph {
+
+  font-family: "Paragraph", sans-serif !important;
+
+}
+
+.contact-us-page-scope .font-numbers {
+
+  font-family: "Numbers", sans-serif !important;
+
+}
+
+.contact-us-page-scope .font-time {
+
+  font-family: "TimeFont", sans-serif !important;
+
+}
+
+/* FORCE WIE CODE CUSTOM FONTS */
+
+.contact-us-page-scope h2.wie-section-title.font-heading {
+
+  font-family: "Heading", sans-serif !important;
+
+}
+
+.contact-us-page-scope .font-subheading {
+
+  font-family: "Subheading", sans-serif !important;
+
+}
+
+.contact-us-page-scope .font-paragraph {
+
+  font-family: "Paragraph", sans-serif !important;
+
+}
+
+.contact-us-page-scope .font-numbers {
+
+  font-family: "Numbers", sans-serif !important;
+
+}
+
+/* ========================================
+
+   FORCE SHARED WIE CODE FONTS
+
+   ======================================== */
+
+.contact-us-page-scope .wie-section-title,
+
+.contact-us-page-scope .wie-section-title span {
+
+  font-family: "Heading", sans-serif !important;
+
+  font-weight: 400 !important;
+
+}
+
+.contact-us-page-scope .wie-section-subtitle,
+
+.contact-us-page-scope .wie-form-label,
+
+.contact-us-page-scope .wie-form-input,
+
+.contact-us-page-scope .wie-form-textarea,
+
+.contact-us-page-scope .wie-lead-role,
+
+.contact-us-page-scope .wie-venue-state {
+
+  font-family: "Paragraph", sans-serif !important;
+
+}
+
+.contact-us-page-scope .wie-card-tag,
+
+.contact-us-page-scope .wie-venue-name,
+
+.contact-us-page-scope .wie-lead-name,
+
+.contact-us-page-scope .wie-btn-submit,
+
+.contact-us-page-scope .wie-map-explore-btn {
+
+  font-family: "Subheading", sans-serif !important;
+
+}
+
+.contact-us-page-scope .wie-lead-phone-text {
+
+  font-family: "Numbers", sans-serif !important;
+
+}
+
+/* =========================================================
+
+   FINAL TYPOGRAPHY OVERRIDE
+
+   MATCH CONTACT US WITH REGISTRATION PAGE
+
+   ========================================================= */
+
+/* Main Contact Us heading - same as Registration */
+
+.contact-us-page-scope .wie-section-title,
+
+.contact-us-page-scope .wie-section-title span {
+
+    font-family: "Heading", sans-serif !important;
+
+    font-size: clamp(2.4rem, 7vw, 3.7rem) !important;
+
+    font-weight: 400 !important;
+
+    line-height: 1.1 !important;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: transparent !important;
+
+    -webkit-text-fill-color: transparent !important;
+
+    text-shadow: none !important;
+
+}
+
+/* Same white-to-magenta gradient as Registration */
+
+.contact-us-page-scope .wie-section-title {
+
+    background: linear-gradient(
+
+        to bottom,
+
+        #ffffff 0%,
+
+        #ffffff 50%,
+
+        #C21891 80%
+
+    ) !important;
+
+    -webkit-background-clip: text !important;
+
+    background-clip: text !important;
+
+    display: inline-block !important;
+
+    text-align: center;
+
+}
+
+/* Remove separate magenta styling from US */
+
+.contact-us-page-scope .wie-section-title .wie-highlight-magenta {
+
+    color: transparent !important;
+
+    -webkit-text-fill-color: transparent !important;
+
+    background: none !important;
+
+    text-shadow: none !important;
+
+    font-family: "Heading", sans-serif !important;
+
+    font-weight: 400 !important;
+
+}
+
+/* Subtitle - Registration paragraph font */
+
+.contact-us-page-scope .wie-section-subtitle {
+
+    font-family: "Paragraph", sans-serif !important;
+
+}
+
+/* Form labels and text */
+
+.contact-us-page-scope .wie-form-label,
+
+.contact-us-page-scope .wie-form-input,
+
+.contact-us-page-scope .wie-form-textarea,
+
+.contact-us-page-scope .wie-lead-role,
+
+.contact-us-page-scope .wie-venue-state {
+
+    font-family: "Paragraph", sans-serif !important;
+
+}
+
+/* Subheadings and buttons */
+
+.contact-us-page-scope .wie-card-tag,
+
+.contact-us-page-scope .wie-venue-name,
+
+.contact-us-page-scope .wie-lead-name,
+
+.contact-us-page-scope .wie-btn-submit,
+
+.contact-us-page-scope .wie-map-explore-btn {
+
+    font-family: "Subheading", sans-serif !important;
+
+}
+
+/* Phone numbers */
+
+.contact-us-page-scope .wie-lead-phone-text {
+
+    font-family: "Numbers", sans-serif !important;
+
+}
+
+/* Mobile heading size */
+
+@media (max-width: 480px) {
+
+    .contact-us-page-scope .wie-section-title {
+
+        font-size: clamp(2rem, 8vw, 2.6rem) !important;
+
+    }
+
+}
+
+/* Reusable Button integration */
+
+.contact-us-page-scope .wie-btn-submit.btn-fill {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  background: var(--magenta-primary);
+
+  color: #FFFFFF;
+
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  border-top: 1.5px solid rgba(255, 255, 255, 0.65);
+
+  font-family: "Subheading", sans-serif !important;
+
+  letter-spacing: 1.5px;
+
+  text-decoration: none;
+
+  box-sizing: border-box;
+
+}
+
+.contact-us-page-scope .wie-btn-submit.btn-fill:hover {
+
+  color: #FFFFFF;
+
+  background: var(--magenta-hover);
+
+}
+
+/* =========================================================
+
+   REGISTRATION-STYLE ANIMATED SUBMIT BUTTON
+
+   ========================================================= */
+
+.contact-us-page-scope .wie-btn-submit.btn-fill {
+
+  display: inline-flex;
+
+  width: 100%;
+
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 16px 28px;
+
+  border: 2px solid #C21891;
+
+  border-radius: 8px;
+
+  background: transparent !important;
+
+  color: #C21891;
+
+  font-family: "Subheading", sans-serif !important;
+
+  font-size: 17px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.1em;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  position: relative;
+
+  z-index: 1;
+
+  transition: color 0.5s ease, border-color 0.5s ease;
+
+}
+
+.contact-us-page-scope .wie-btn-submit.btn-fill > .wie-btn-icon {
+
+  position: relative;
+
+  z-index: 2;
+
+  flex-shrink: 0;
+
+}
+
+.contact-us-page-scope .wie-btn-submit.btn-fill:hover {
+
+  background: transparent !important;
+
+  color: #FFFFFF;
+
+}
+
+.contact-us-page-scope .wie-btn-submit.btn-fill:disabled {
+
+  opacity: 0.6;
+
+  cursor: not-allowed;
+
+}
+
+@media (min-width: 640px) {
+
+  .contact-us-page-scope .wie-btn-submit.btn-fill {
+
+    font-size: 17px;
+
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  .contact-us-page-scope .wie-btn-submit.btn-fill {
+
+    font-size: 19px;
+
+  }
+
+}
+
+/* Final responsive typography scale */
+.contact-us-page-scope .wie-section-subtitle,
+.contact-us-page-scope .wie-form-label,
+.contact-us-page-scope .wie-form-input,
+.contact-us-page-scope .wie-form-textarea,
+.contact-us-page-scope .wie-venue-state,
+.contact-us-page-scope .wie-lead-role {
+  font-family: "Paragraph", sans-serif !important;
+}
+
+.contact-us-page-scope .wie-form-label {
+  font-size: 0.95rem;
+}
+
+.contact-us-page-scope .wie-form-input,
+.contact-us-page-scope .wie-form-textarea {
+  font-size: 1rem !important;
+}
+
+.contact-us-page-scope .wie-card-tag,
+.contact-us-page-scope .wie-venue-name,
+.contact-us-page-scope .wie-lead-name,
+.contact-us-page-scope .wie-badge-value {
+  font-family: "Subheading", sans-serif !important;
+}
+
+.contact-us-page-scope .wie-card-tag {
+  font-size: 0.8rem;
+}
+
+.contact-us-page-scope .wie-venue-name {
+  font-size: 1.15rem;
+}
+
+.contact-us-page-scope .wie-venue-state {
+  font-size: 0.95rem !important;
+}
+
+.contact-us-page-scope .wie-lead-name {
+  font-size: 1.15rem;
+}
+
+.contact-us-page-scope .wie-lead-role {
+  font-size: 0.9rem !important;
+}
+
+.contact-us-page-scope .wie-lead-phone-text {
+  font-family: "Numbers", sans-serif !important;
+  font-size: 1.05rem;
+}
+
+.contact-us-page-scope .wie-badge-label {
+  font-size: 0.72rem;
+}
+
+.contact-us-page-scope .wie-badge-value {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 480px) {
+  .contact-us-page-scope .wie-form-label {
+    font-size: 0.9rem;
+  }
+
+  .contact-us-page-scope .wie-form-input,
+  .contact-us-page-scope .wie-form-textarea {
+    font-size: 0.98rem !important;
+  }
+
+  .contact-us-page-scope .wie-venue-name,
+  .contact-us-page-scope .wie-lead-name {
+    font-size: 1.05rem;
+  }
+
+  .contact-us-page-scope .wie-venue-state,
+  .contact-us-page-scope .wie-lead-role {
+    font-size: 0.88rem !important;
+  }
+
+  .contact-us-page-scope .wie-lead-phone-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================================================
+
+   REGISTRATION BUTTON COMPONENT - CONTACT US INTEGRATION
+
+   Both buttons use the shared Button component (btn-fill).
+
+   ========================================================= */
+
+/* =====================================================
+
+   CONTACT US - SHARED REGISTRATION BUTTON INTEGRATION
+
+   Uses the existing Button component and its default
+
+   btn-fill styling. Do not override its appearance.
+
+   ===================================================== */
+
+/* Submit button */
+
+.contact-us-page-scope .wie-submit-container {
+
+  width: 100%;
+
+  margin-top: auto;
+
+  padding-top: 6px;
+
+}
+
+.contact-us-page-scope .wie-btn-submit {
+
+  width: 100%;
+
+  max-width: 100%;
+
+}
+
+/* Submit button icon */
+
+.contact-us-page-scope .wie-btn-submit .wie-btn-icon {
+
+  flex-shrink: 0;
+
+  margin-left: 8px;
+
+}
+
+/* Directions button wrapper */
+
+.contact-us-page-scope .wie-map-btn-wrapper {
+
+  position: absolute;
+
+  bottom: 14px;
+
+  left: 0;
+
+  right: 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 5;
+
+  pointer-events: none;
+
+}
+
+/* Directions button */
+
+.contact-us-page-scope .wie-map-explore-btn {
+
+  width: auto;
+
+  min-width: 220px;
+
+  max-width: calc(100% - 24px);
+
+  pointer-events: auto;
+
+  white-space: nowrap;
+
+}
+
+/* Mobile responsiveness */
+
+@media (max-width: 480px) {
+
+  .contact-us-page-scope .wie-map-explore-btn {
+
+    min-width: 190px;
+
+  }
+
+}
+
+/* GET DIRECTIONS BUTTON - FIX */
+
+.contact-us-page-scope .wie-map-btn-wrapper {
+
+  position: absolute;
+
+  bottom: 14px;
+
+  left: 0;
+
+  right: 0;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 20;
+
+  pointer-events: none;
+
+}
+
+.contact-us-page-scope .wie-map-btn-wrapper > * {
+
+  pointer-events: auto;
+
+}
+
+/* =========================================================
+   GET DIRECTIONS BUTTON PLACEMENT
+   ========================================================= */
+
+.contact-us-page-scope .wie-campus-container {
+  position: relative;
+}
+
+.contact-us-page-scope .wie-map-btn-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 14px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.contact-us-page-scope .wie-map-btn-wrapper > * {
+  pointer-events: auto;
+}
+
+.contact-us-page-scope .wie-map-explore-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: auto;
+  min-width: 220px;
+  max-width: calc(100% - 24px);
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .contact-us-page-scope .wie-map-explore-btn {
+    min-width: 190px;
+  }
+}
+
+.contact-us-page-scope .wie-btn-submit.btn-fill.wie-map-explore-btn {
+  background: var(--magenta-primary) !important;
+  color: #FFFFFF;
+  border-color: var(--magenta-primary);
+}
+
+.contact-us-page-scope .wie-btn-submit.btn-fill.wie-map-explore-btn:hover {
+  background: var(--magenta-hover) !important;
+  color: #FFFFFF;
+}
+
+.contact-us-page-scope .wie-btn-submit.btn-fill.wie-map-explore-btn,
+.contact-us-page-scope .wie-btn-submit.btn-fill.wie-map-explore-btn:hover {
+  transition: none;
+}
+
+.contact-us-page-scope .wie-btn-submit.btn-fill.wie-map-explore-btn::before {
+  display: none;
+}
+
+.contact-us-page-scope .wie-btn-submit.btn-fill.wie-map-explore-btn > span {
+  transform: translateY(150%) !important;
+  transition: none !important;
+}
+
+.contact-us-page-scope .wie-btn-submit.btn-fill.wie-map-explore-btn:hover .wie-btn-icon {
+  transform: none;
+}

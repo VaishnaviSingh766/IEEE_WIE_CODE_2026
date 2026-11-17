@@ -1,0 +1,150 @@
+/* ========================================
+   WIE CODE FONT
+   ======================================== */
+
+@font-face {
+  font-family: "WieCode";
+  src: url("/fonts/WieCode.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-wiecode {
+  font-family: "WieCode", sans-serif !important;
+  font-weight: 400 !important;
+}
+
+
+/* ========================================
+   HEADING FONT
+   ======================================== */
+
+@font-face {
+  font-family: "Heading";
+  src: url("/fonts/Heading.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-heading {
+  font-family: "Heading", sans-serif !important;
+  font-size: clamp(2rem, 4vw, 4rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.1 !important;
+  /* color: white; */
+
+  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #C21891 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+
+  /* Smooth 60% magenta → 40% white gradient */
+  /* background: linear-gradient(
+    to bottom,
+    #E6007A 0%,
+    #E6007A 30%,
+    #E85AAB 60%,
+    #FFFFFF 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; */
+}
+
+/* .font-heading {
+  background: linear-gradient(to bottom, #ffffff 0%, #ffffff 40%, #C21891 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+
+/* ========================================
+   SUBHEADING FONT
+   ======================================== */
+
+@font-face {
+  font-family: "Subheading";
+  src: url("/fonts/Subheading.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-subheading {
+  font-family: "Subheading", sans-serif !important;
+  font-weight: 400 !important;
+}
+
+
+/* ========================================
+   PARAGRAPH FONT
+   ======================================== */
+
+@font-face {
+  font-family: "Paragraph";
+  src: url("/fonts/Paragraph.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-paragraph {
+  font-family: "Paragraph", sans-serif !important;
+  font-weight: 400 !important;
+}
+
+@media (max-width: 1023px) {
+  .font-paragraph {
+    font-size: 10px !important;
+  }
+}
+
+/* Only large devices (1024px and above) */
+@media (min-width: 1024px) {
+  .font-paragraph {
+    font-size: 16px !important;
+  }
+}
+
+/* ========================================
+   NUMBERS FONT
+   ======================================== */
+
+@font-face {
+  font-family: "Numbers";
+  src: url("/fonts/Numbers.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-numbers {
+  font-family: "Numbers", sans-serif !important;
+  font-weight: 400 !important;
+}
+
+
+/* ========================================
+   TIMER FONT
+   ======================================== */
+
+@font-face {
+  font-family: "TimeFont";
+  src: url("/fonts/timefont.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-time {
+  font-family: "TimeFont", sans-serif !important;
+  font-weight: 400 !important;
+  font-size: clamp(2.4rem, 4.5vw, 4rem) !important;
+  line-height: 1 !important;
+}

@@ -1,0 +1,3 @@
+This directory contains downloadable files (PDFs, brochures, etc.) that need direct URL access.
+
+Example usage: <a href="/files/brochure.pdf">Download Brochure</a>

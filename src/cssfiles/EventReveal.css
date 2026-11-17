@@ -1,0 +1,569 @@
+
+.scratch-page {
+  --pink: #c21891;
+  --pink-light: #e6a4d0;
+  --black: #000000;
+
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+  min-height: 100svh;
+  padding: 105px 5vw 80px;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    #000000 0,
+    rgba(194, 24, 145, 0.035) 120px,
+    rgba(194, 24, 145, 0.08) 260px,
+    #000000 520px
+  );
+  color: #ffffff;
+  font-family: 'Paragraph', sans-serif;
+}
+
+
+.scratch-nav,
+.scratch-footer {
+  position: absolute;
+  z-index: 5;
+  left: 5vw;
+  right: 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.scratch-nav {
+  top: 28px;
+}
+
+.scratch-footer {
+  bottom: 22px;
+  color: #a99aa5;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.scratch-logo {
+  color: var(--pink);
+  font-size: 12px;
+  letter-spacing: 5px;
+  font-weight: 700;
+}
+
+.scratch-logo span {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.scratch-index {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--pink);
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.scratch-index span {
+  width: 40px;
+  height: 1px;
+  background: var(--pink);
+}
+
+/* Main reveal layout */
+.scratch-layout {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1550px;
+  min-height: calc(100svh - 185px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(20px, 4vh, 36px);
+}
+
+/* Reveal instruction */
+.scratch-intro {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 0;
+  animation: scratchIntroIn 0.9s ease both;
+  text-align: center;
+}
+
+.scratch-eyebrow {
+  color: var(--pink);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  line-height: 1.8;
+}
+
+.scratch-intro h1 {
+  margin: 0;
+  font-family: 'Heading', sans-serif;
+  font-size: clamp(32px, 5vw, 60px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.scratch-intro h1 em {
+  color: var(--pink);
+  font-style: normal;
+}
+
+.scratch-instruction {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 42px;
+  color: var(--pink);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.scratch-finger {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--pink);
+  border-radius: 50%;
+  font-size: 20px;
+  animation: fingerPulse 1.8s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(194, 24, 145, 0.12);
+}
+
+/* Scratch progress indicator */
+.scratch-progress {
+  margin-top: 34px;
+  max-width: 310px;
+}
+
+.scratch-progress-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: #a99aa5;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+.scratch-progress-top span:last-child {
+  color: var(--pink);
+  font-variant-numeric: tabular-nums;
+}
+
+.scratch-progress-track {
+  height: 2px;
+  margin-top: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.scratch-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--pink), #e6a4d0);
+  box-shadow: 0 0 12px var(--pink);
+  transition: width 0.18s ease;
+}
+
+.scratch-progress-note {
+  display: block;
+  margin-top: 10px;
+  color: #75616f;
+  font-size: 9px;
+  letter-spacing: 0.5px;
+}
+
+/* Card frame */
+
+.scratch-card {
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 600px);
+  height: clamp(320px, 52vh, 540px);
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid rgba(194, 24, 145, 0.85);
+  border-radius: 17px;
+  background: #130512;
+  box-shadow:
+    0 0 35px rgba(194, 24, 145, 0.09),
+    0 0 100px rgba(194, 24, 145, 0.045);
+  animation: cardEnter 1s 0.12s ease both;
+}
+
+
+/* Underlying artwork */
+.scratch-artwork {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 78% 26%, rgba(194, 24, 145, 0.48), transparent 28%),
+    radial-gradient(ellipse at 45% 68%, rgba(178, 12, 104, 0.45), transparent 45%),
+    linear-gradient(155deg, #25091f 0%, #110511 48%, #030203 100%);
+}
+
+/* Pink celestial moon */
+.scratch-moon {
+  position: absolute;
+  top: 7%;
+  right: 9%;
+  width: clamp(105px, 14vw, 185px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 30%, #f5dcef 0%, #e6a4d0 18%, var(--pink) 47%, #710b55 76%);
+  box-shadow:
+    0 0 30px rgba(194, 24, 145, 0.75),
+    0 0 100px rgba(194, 24, 145, 0.34);
+  animation: moonDrift 7s ease-in-out infinite;
+}
+
+.scratch-art-glow {
+  position: absolute;
+  width: 65%;
+  height: 35%;
+  left: 18%;
+  top: 45%;
+  background: rgba(194, 24, 145, 0.22);
+  filter: blur(70px);
+}
+
+/* Jagged fantasy mountains */
+.scratch-mountains {
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  bottom: 12%;
+  height: 48%;
+  background: linear-gradient(155deg, #7c184f, #250a20 42%, #060306 80%);
+  clip-path: polygon(
+    0 55%, 10% 35%, 18% 48%, 31% 4%, 42% 38%,
+    54% 18%, 66% 47%, 79% 7%, 91% 40%, 100% 26%,
+    100% 100%, 0 100%
+  );
+}
+
+.scratch-water {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 28%;
+  background:
+    repeating-linear-gradient(
+      176deg,
+      transparent 0 9px,
+      rgba(194, 24, 145, 0.7) 10px,
+      transparent 12px 20px
+    ),
+    linear-gradient(to bottom, rgba(194, 24, 145, 0.16), #080208);
+  mask-image: linear-gradient(to bottom, transparent, black 22%);
+}
+
+.scratch-stars {
+  position: absolute;
+  top: 16%;
+  left: 10%;
+  color: #e6b8d9;
+  font-size: 15px;
+  letter-spacing: 5px;
+  text-shadow: 0 0 20px var(--pink);
+}
+
+/* Centered event theme */
+.scratch-theme-copy {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 25px;
+  text-align: center;
+}
+
+.art-label {
+  color: #e6b8d9;
+  font-size: 9px;
+  letter-spacing: 4px;
+}
+
+.scratch-theme-copy h2 {
+  margin: 22px 0;
+  color: #f5dcef;
+  font-family: 'Heading', sans-serif;
+  font-size: clamp(38px, 4.2vw, 65px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -1px;
+  text-shadow: 0 0 30px rgba(194, 24, 145, 0.3);
+}
+
+.art-rule {
+  width: 38px;
+  height: 1px;
+  margin-bottom: 20px;
+  background: var(--pink);
+}
+
+.art-date {
+  margin: 0 0 12px;
+  color: #e6b8d9;
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+.art-venue {
+  color: #e6b8d9;
+  font-size: 9px;
+  line-height: 2;
+  letter-spacing: 2px;
+}
+
+.art-revealed-label {
+  margin-top: 22px;
+  color: #fff;
+  font-size: 9px;
+  letter-spacing: 3px;
+  animation: themePop 0.65s ease both;
+}
+
+/* Real scratchable canvas */
+.scratch-foil {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  cursor: crosshair;
+  touch-action: none;
+  border-radius: inherit;
+  transition: opacity 0.75s ease;
+}
+
+.scratch-foil.foil-cleared {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Instructions above the foil */
+.foil-hint {
+  position: absolute;
+  z-index: 4;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.65);
+  mix-blend-mode: difference;
+}
+
+.foil-hint span {
+  font-size: 28px;
+  animation: fingerPulse 1.7s ease-in-out infinite;
+}
+
+/* Card corner accents */
+.scratch-card-corner {
+  position: absolute;
+  z-index: 5;
+  width: 22px;
+  height: 22px;
+  pointer-events: none;
+}
+
+.corner-top {
+  top: 13px;
+  left: 13px;
+  border-top: 1px solid var(--pink);
+  border-left: 1px solid var(--pink);
+}
+
+.corner-bottom {
+  bottom: 13px;
+  right: 13px;
+  border-right: 1px solid var(--pink);
+  border-bottom: 1px solid var(--pink);
+}
+
+.scratch-card-revealed {
+  box-shadow:
+    0 0 35px rgba(194, 24, 145, 0.2),
+    0 0 100px rgba(194, 24, 145, 0.12);
+}
+
+.scratch-card-revealed .scratch-artwork {
+  animation: artworkReveal 1s ease both;
+}
+
+/* Animations */
+@keyframes scratchIntroIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fingerPulse {
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 24px rgba(194, 24, 145, 0.22);
+  }
+}
+
+@keyframes moonDrift {
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes artworkReveal {
+  from {
+    filter: brightness(0.7) saturate(0.85);
+    transform: scale(1.025);
+  }
+  to {
+    filter: brightness(1.12) saturate(1.12);
+    transform: scale(1);
+  }
+}
+
+@keyframes themePop {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+  .scratch-page {
+    min-height: unset;
+    padding: 95px 20px 24px;
+  }
+
+  .scratch-layout {
+    min-height: unset;
+    gap: 24px;
+  }
+
+  .scratch-intro {
+    padding: 0;
+  }
+
+  .scratch-instruction {
+    margin-top: 22px;
+  }
+
+  .scratch-progress {
+    margin-top: 22px;
+  }
+
+  .scratch-card {
+    height: min(58vw, 420px);
+    min-height: 300px;
+  }
+
+  .scratch-footer {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 420px) {
+  .scratch-nav,
+  .scratch-footer {
+    left: 18px;
+    right: 18px;
+  }
+
+  .scratch-logo {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .scratch-index {
+    font-size: 7px;
+    letter-spacing: 1px;
+    gap: 6px;
+  }
+
+  .scratch-index span {
+    width: 14px;
+  }
+
+  .scratch-card {
+    min-height: 280px;
+  }
+
+  .scratch-theme-copy {
+    padding: 14px;
+  }
+
+  .scratch-theme-copy h2 {
+    font-size: 36px;
+  }
+
+  .art-date {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .art-venue {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scratch-page *,
+  .scratch-page *::before,
+  .scratch-page *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
